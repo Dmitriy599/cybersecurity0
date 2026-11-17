@@ -1,0 +1,86 @@
+</div>
+        <div class="card">
+          <h3>Слабые пароли</h3>
+          <p>Пароль «123456» подбирается за секунды. А если один пароль используется везде, взлом одного аккаунта открывает доступ ко всем остальным.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tips">
+      <h2>Правила цифровой гигиены</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>1. Двухфакторная аутентификация</h3>
+          <p>Включите 2FA везде, где можно. Даже если пароль утечёт, без второго фактора в аккаунт не войти.</p>
+        </div>
+        <div class="card">
+          <h3>2. Менеджер паролей</h3>
+          <p>Используйте уникальный надёжный пароль для каждого сервиса. Запомнить нужно только один мастер-пароль.</p>
+        </div>
+        <div class="card">
+          <h3>3. Обновления</h3>
+          <p>Своевременные обновления ОС и программ закрывают известные уязвимости, через которые чаще всего атакуют.</p>
+        </div>
+        <div class="card">
+          <h3>4. Резервные копии</h3>
+          <p>Держите резервные копии важных файлов на отдельном носителе или в облаке — это спасает и от вирусов, и от поломки диска.</p>
+        </div>
+        <div class="card">
+          <h3>5. Осторожность с Wi-Fi</h3>
+          <p>В общественных сетях не заходите в банк и не вводите пароли. Для чувствительных операций лучше мобильный интернет или VPN.</p>
+        </div>
+        <div class="card">
+          <h3>6. Проверка ссылок</h3>
+          <p>Наводите курсор на ссылку перед кликом и читайте адрес. «sberbank-online.verify-login.ru» — это не Сбербанк.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="checklist">
+      <h2>Чек-лист: 5 минут на безопасность</h2>
+      <div class="card">
+        <ul class="checklist">
+          <li>Включить двухфакторную аутентификацию в почте</li>
+          <li>Обновить операционную систему и браузер</li>
+          <li>Сменить пароль на уникальный (минимум 12 символов)</li>
+          <li>Проверить, к каким приложениям есть доступ у аккаунтов соцсетей</li>
+          <li>Сделать резервную копию важных файлов</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Вопрос по безопасности?</h2>
+      <div class="card">
+        <form id="contactForm">
+          <input type="text" name="name" placeholder="Ваше имя" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="message" rows="4" placeholder="Ваш вопрос" required></textarea>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>Сайт-демо о кибербезопасности. Форма отправки — заглушка.</p>
+    </footer>
+
+    <script>
+      // Плавная прокрутка по якорям
+      document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          document.querySelector(link.getAttribute('href'))
+            .scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Демо-обработчик формы
+      document.getElementById('contactForm').addEventListener('submit', e => {
+        e.preventDefault();
+        alert('Спасибо! Вопрос получен (демо-режим).');
+        e.target.reset();
+      });
+    </script>
+  </body>
+</html>
